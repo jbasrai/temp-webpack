@@ -1,7 +1,7 @@
-const React = require('react')
+import React from 'react'
 
-module.exports = React.createElement(
+export default React.createElement(
 	'div',
 	null,
-	'he'
+	'now what'
 )
