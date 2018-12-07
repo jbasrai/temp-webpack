@@ -1,8 +1,18 @@
-// import React from 'react'
-const React = require('react')
+import React from 'react'
 
 const Root = () => (
-	<div>asdf</div>
+	<button
+		onClick={
+			event => {
+				import('./text').then(module => {
+					const text = module.default
+					console.log(text)
+				})
+			}
+		}
+	>
+		click
+	</button>
 )
 
-module.exports = Root
+export default Root
