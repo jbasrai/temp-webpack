@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default React.createElement(
-	'div',
-	null,
-	'now what'
-)
+// const app = React.createElement('div', null, 'app')
+const app = <div>what</div>
+
+export default app

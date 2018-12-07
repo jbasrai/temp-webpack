@@ -16,6 +16,20 @@ module.exports = {
 		filename: 'bundle.js',
 	},
 
+	module: {
+		rules: [
+			{
+				test: /\.jsx?$/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						configFile: path.resolve(__dirname, '..'),
+					},
+				},
+			},
+		],
+	},
+
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 	],
