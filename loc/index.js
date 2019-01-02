@@ -1,12 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Root from './Root.jsx'
-
-console.log('first load')
+import Home from './Home.jsx'
 
 const render = () => {
 	ReactDOM.render(
-		<Root />,
+		<Home />,
 		document.getElementById('root')
 	)
 }
@@ -15,7 +13,7 @@ render()
 
 if (module.hot) {
 	module.hot.accept(
-		'./Root.jsx',
+		'./Home.jsx',
 		() => {
 			render()
 		}
