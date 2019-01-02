@@ -4,8 +4,8 @@ const loc = 'en'
 
 const words = Promise
 	.all([
-		import(`./words/apple.${loc}.js`),
-		import(`./words/banana.${loc}.js`),
+		import(/* webpackMode: 'eager' */ `./words/apple.${loc}.js`),
+		import(/* webpackMode: 'eager' */ `./words/banana.${loc}.js`),
 	])
 	.then(modules => modules.map(module => module.default))
 	.then(console.log)
